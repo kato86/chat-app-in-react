@@ -6,7 +6,10 @@ export default () => {
   const [id, setId] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [room, setRoom] = useState("");
-  const [socket] = useSocket("socket-url");
+  const [socket] = useSocket("<https://open-chat-naostsaecf.now.sh>");
+
+  socket.connect();
+  console.log(socket);
 
   const handleSubmit = e => {
     e.preventDefault();
